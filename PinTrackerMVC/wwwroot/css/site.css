@@ -10,9 +10,9 @@ a.navbar-brand {
 /* Index Section/Welcome/Search */
 #index-section {
   border: 2px solid black;
-  width: 110%;
-  padding: 30px;
-  margin-top: 250px;
+  width: 100%;
+  padding: 60px;
+  margin-top: 100px;
   background-color: rgba(121, 121, 121, 0.61);
 }
 
@@ -52,7 +52,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  font-family: 'Fredoka One', sans-serif;
+  font-family: 'Acme', sans-serif;
   margin-bottom: 60px;
   background-image: url(https://i.imgur.com/86JUy87.jpg);
   -webkit-background-size: cover;
