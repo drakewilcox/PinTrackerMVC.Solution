@@ -2961,6 +2961,11 @@
   "RootNamespace": "PinTrackerMVC",
   "Documents": [
     {
+      "FilePath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/Views/Locations/Search.cshtml",
+      "TargetPath": "Views\\Locations\\Search.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -2968,11 +2973,6 @@
     {
       "FilePath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/Views/Home/Locations/Search.cshtml",
-      "TargetPath": "Views\\Home\\Locations\\Search.cshtml",
       "FileKind": "mvc"
     },
     {
