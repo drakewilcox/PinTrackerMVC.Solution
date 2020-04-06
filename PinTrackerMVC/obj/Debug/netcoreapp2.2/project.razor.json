@@ -2971,6 +2971,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/Views/Home/Locations/Search.cshtml",
+      "TargetPath": "Views\\Home\\Locations\\Search.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

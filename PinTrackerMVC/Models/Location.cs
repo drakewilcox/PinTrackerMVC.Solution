@@ -34,14 +34,11 @@ public class Location
     public string website { get; set; }
     public int? zone_id { get; set; }
     public int region_id { get; set; }
-    public int? location_type_id { get; set; }
     public string description { get; set; }
     public int? operator_id { get; set; }
     public string date_last_updated { get; set; }
-    public int? last_updated_by_user_id { get; set; }
     public bool? is_stern_army { get; set; }
     public string country { get; set; }
-    public string last_updated_by_username { get; set; }
     public int num_machines { get; set; }
     public List<LocationMachineXref> location_machine_xrefs { get; set; }
 
@@ -51,7 +48,7 @@ public class Location
       var result = apiCallTask.Result; 
 
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["machines"].ToString());
+      List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["locations"].ToString());
 
       return locationList; 
     }

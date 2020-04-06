@@ -60,3 +60,4 @@
 /Users/brandansayarath/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/obj/Debug/netcoreapp2.2/PinTrackerMVC.csproj.CopyComplete
 /Users/brandansayarath/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/About.g.cshtml.cs
 /Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/About.g.cshtml.cs
+/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/obj/Debug/netcoreapp2.2/Razor/Views/Locations/Search.g.cshtml.cs
