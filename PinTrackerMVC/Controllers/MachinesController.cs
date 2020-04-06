@@ -16,5 +16,7 @@ namespace PinTrackerMVC.Controllers
       // List<Machine> thisMachine = allMachines.Where(mach => mach.name == "Monster Bash").ToList();
       return View(allMachines);
     }
+
+    
   }
 }
