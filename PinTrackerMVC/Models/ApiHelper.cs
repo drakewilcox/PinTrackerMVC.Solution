@@ -16,7 +16,7 @@ namespace PinTrackerMVC.Models
     public static async Task<string> GetAllByName(string machineName)
     {
       RestClient client = new RestClient("https://pinballmap.com/api/v1/");
-      RestRequest request = new RestRequest($"locations/?region=Portland&by_machine_name={machineName}", Method.GET);
+      RestRequest request = new RestRequest($"locations/?region=Portland&by_machine_name={ machineName }", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content; 
     }
