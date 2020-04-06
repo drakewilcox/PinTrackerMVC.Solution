@@ -6,10 +6,12 @@
 <div id="index-section">
     <div class="text-center">
         <h1 class="display-4">Welcome to the Portland Pinball Tracker!</h1>
-    <form class="example" action="action_page.php">
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+
+        @using (Html.BeginForm("Search", "Locations"))
+        {
+            <input type="text" placeholder="Search.." name="Search" class="form-control"/>
+						<br>
+            <input type="submit"  value="search" class="btn btn-dark btn-lg">
+        }   
     </div> 
 </div>
-
