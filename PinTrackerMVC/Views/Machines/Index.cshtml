@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>All Machines</h1>
+@foreach(Machine machine in Model)
+{
+<ol>
+    <ul>
+        <li>Machine Name: @machine.name</li>
+        <li>Manufacturer: @machine.manufacturer</li>
+        <li>Year: @machine.year</li>
+        <li>Website: @machine.ipdb_link</li>
+    </ul>
+    <br>
+
+</ol>
+
+}
