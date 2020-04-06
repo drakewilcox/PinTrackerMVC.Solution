@@ -12176,23 +12176,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/drakewilcox/.nuget/packages/": {},
+    "/Users/brandansayarath/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/PinTrackerMVC.csproj",
+      "projectUniqueName": "/Users/brandansayarath/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/PinTrackerMVC.csproj",
       "projectName": "PinTrackerMVC",
-      "projectPath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/PinTrackerMVC.csproj",
-      "packagesPath": "/Users/drakewilcox/.nuget/packages/",
-      "outputPath": "/Users/drakewilcox/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/obj/",
+      "projectPath": "/Users/brandansayarath/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/PinTrackerMVC.csproj",
+      "packagesPath": "/Users/brandansayarath/.nuget/packages/",
+      "outputPath": "/Users/brandansayarath/Desktop/PinTrackerMVC.Solution/PinTrackerMVC/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/drakewilcox/.nuget/NuGet/NuGet.Config"
+        "/Users/brandansayarath/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
