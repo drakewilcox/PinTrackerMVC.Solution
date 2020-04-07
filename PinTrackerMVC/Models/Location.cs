@@ -31,7 +31,7 @@ public class Location
     public string phone { get; set; }
     public string lat { get; set; }
     public string lon { get; set; }
-    public string website { get; set; }
+    public string Website { get; set; }
     public int? zone_id { get; set; }
     public int region_id { get; set; }
     public string description { get; set; }

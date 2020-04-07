@@ -12,7 +12,8 @@ namespace PinTrackerMVC.Controllers
     [HttpPost]
     public ActionResult Search(string search)
     {
-      var searchLocation = Location.GetLocation(search);
+      List<Location> searchLocation = Location.GetLocation(search);
+      
       return View(searchLocation);
     }
   }
