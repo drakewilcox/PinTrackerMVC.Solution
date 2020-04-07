@@ -12,7 +12,12 @@ namespace PinTrackerMVC.Controllers
     [HttpPost]
     public ActionResult Search(string search)
     {
-      List<Location> searchLocation = Location.GetLocation(search);
+      var searchLocation = Location.GetLocation(search);
+      
+      foreach (Location location in searchLocation)
+      { 
+        location.MachineDetails = MachineDetails.GetDetails(location.id);
+      }
       
       return View(searchLocation);
     }
