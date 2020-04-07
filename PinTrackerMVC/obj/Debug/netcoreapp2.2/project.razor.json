@@ -2971,6 +2971,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Hova\\Desktop\\PinTrackerMVC.Solution\\PinTrackerMVC\\Views\\Locations\\Search.cshtml",
+      "TargetPath": "Views\\Locations\\Search.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Hova\\Desktop\\PinTrackerMVC.Solution\\PinTrackerMVC\\Views\\Machines\\Index.cshtml",
       "TargetPath": "Views\\Machines\\Index.cshtml",
       "FileKind": "mvc"
