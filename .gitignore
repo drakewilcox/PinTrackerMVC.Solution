@@ -1,5 +1,6 @@
 */obj/
 */bin/
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/osx
 # Edit at https://www.gitignore.io/?templates=osx
@@ -33,3 +34,6 @@ Temporary Items
 .apdisk
 
 # End of https://www.gitignore.io/api/osx
+=======
+.vscode/
+>>>>>>> master

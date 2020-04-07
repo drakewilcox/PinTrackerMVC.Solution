@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace PinTrackerMVC.Controllers
 {
@@ -17,6 +18,14 @@ namespace PinTrackerMVC.Controllers
       return View(allMachines);
     }
 
-    
+      // Incomplete code for PinTrackerAPI.Solution
+
+    // public ActionResult Search(string searchByMachine)
+    // {
+    //   var searchMachine = Machine.SearchByName();
+    //   List<Machine> thisMachine = searchMachine.ToList();
+
+    //   return View(searchMachine);
+    // }
   }
 }
