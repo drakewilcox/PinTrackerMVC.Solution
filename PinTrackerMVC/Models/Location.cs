@@ -42,6 +42,8 @@ public class Location
     public int num_machines { get; set; }
     public List<LocationMachineXref> location_machine_xrefs { get; set; }
 
+    public List<MachineDetails> MachineDetails { get; set; }
+
     public static List<Location> GetLocation(string machineName)
     {
       var apiCallTask = ApiHelper.GetAllByName(machineName);
