@@ -10,16 +10,31 @@ namespace PinTrackerMVC.Controllers
   public class LocationsController : Controller 
   {
     [HttpPost]
-    public ActionResult Search(string search)
+    public ActionResult Search(string searchBy, string search)
     {
-      var searchLocation = Location.GetLocation(search);
+      if (searchBy == "Search by machine")
+      {
+        var searchLocation = Location.GetLocation(search);
       
-      foreach (Location location in searchLocation)
-      { 
+        foreach (Location location in searchLocation)
+        { 
         location.MachineDetails = MachineDetails.GetDetails(location.id);
+        }
+
+        return View(searchLocation);
       }
-      
-      return View(searchLocation);
+      if (searchBy == "Search by location")
+      {
+        var searchLocation = Location.LocationByName(search);
+        foreach (Location location in searchLocation)
+        {
+          location.MachineDetails = MachineDetails.GetDetails
+          (location.id);
+        }
+        return View(searchLocation);
+      }
+      else 
+      return View();
     }
   }
 }
