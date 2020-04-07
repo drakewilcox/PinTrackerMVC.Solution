@@ -18,6 +18,8 @@ namespace PinTrackerMVC.Controllers
       return View(allMachines);
     }
 
+      // Incomplete code for PinTrackerAPI.Solution
+
     // public ActionResult Search(string searchByMachine)
     // {
     //   var searchMachine = Machine.SearchByName();

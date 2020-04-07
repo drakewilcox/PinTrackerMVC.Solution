@@ -28,6 +28,8 @@ namespace PinTrackerMVC.Models
 
       return machineList;
     }
+
+     // Incomplete code for PinTrackerAPI.Solution
     
     // public static List<Machine> SearchByName()
     // {
