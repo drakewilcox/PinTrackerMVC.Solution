@@ -12,5 +12,13 @@ namespace PinTrackerMVC.Models
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
+
+    public static async Task<string> MachineByName(string searchByMachine)
+    {
+      RestClient client = new RestClient("https://5000/api/");
+      RestRequest request = new RestRequest($"machines/?name={searchByMachine}");
+      var response = await client.ExecuteTaskAsync(request);
+      return response.Content;
+    }
   }
 }
