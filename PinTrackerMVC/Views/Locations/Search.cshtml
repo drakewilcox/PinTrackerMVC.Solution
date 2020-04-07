@@ -1,0 +1,13 @@
+
+
+@using PinTrackerMVC.Models
+@model List<Location>
+
+<h2>LOCATION RESULTS:</h2>
+
+@foreach (Location location in Model)
+{
+  <p>Venue: @location.name</p>
+  <hr>
+  
+}
