@@ -1,7 +1,7 @@
 
 
 @using PinTrackerMVC.Models
-@* @model List<Location> *@
+
 
 <h2>LOCATION RESULTS:</h2>
 
@@ -13,7 +13,10 @@
   <p>@location.city , @location.state</p>
   <p>@location.zip</p>
   <p>@location.phone</p>
-  <p>@location.num_machines</p>
+  @foreach (MachineDetails details in location.MachineDetails)
+  {
+    <p>@details.Name</p>
+  }
   <hr>
   
 }
