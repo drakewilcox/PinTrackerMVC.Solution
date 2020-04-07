@@ -7,11 +7,18 @@
     <div class="text-center">
         <h1 class="display-4">Welcome to the Portland Pinball Tracker!</h1>
 
+        <p>This map displays all the pinball machines and their locations in the city of Portland!</p>
+
+        <select class="form-control" id="SearchBy" name="SearchBy">
+            <option>Search by machine</option> 
+            <option>Search by location</option> 
+        </select>
+
         @using (Html.BeginForm("Search", "Locations"))
         {
             <input type="text" placeholder="Search.." name="Search" class="form-control"/>
 						<br>
-            <input type="submit"  value="search" class="btn btn-dark btn-lg">
+            <input type="submit"  value="Search!" class="btn btn-dark btn-lg">
         }   
     </div> 
 </div>
