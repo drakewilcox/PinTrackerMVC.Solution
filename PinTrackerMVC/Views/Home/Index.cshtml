@@ -22,3 +22,18 @@
         }   
     </div> 
 </div>
+
+
+<div id='map' style='width: 600px; height: 500px;'></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicGllaGFyZCIsImEiOiJjazhxZjBnYXQwMzh0M2lxc2d0dGY0dzB6In0.AMqWRFCTZDB00Wev4G3GtQ';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-122.6, 45.5], // starting position
+zoom: 9 // starting zoom
+});
+ 
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+</script>
