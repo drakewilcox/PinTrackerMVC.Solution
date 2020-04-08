@@ -1,19 +1,22 @@
-
-
 @using PinTrackerMVC.Models
 
-<h2>LOCATION RESULTS:</h2>
+<h2>LOCATION RESULTS</h2>
 
+
+<div class="card">
+  <div class="card-body">
 @foreach (Location location in Model)
 {
-  <h3>@location.name</h3>
-  <h4>Address:</h4>
-  <p>@location.street, &nbsp; @location.city, &nbsp; @location.state, &nbsp; @location.zip </p>
-  <p>Phone: @location.phone</p>
+  <h3 class="card-body">@location.name <br>
+    @location.street, @location.city, @location.state @location.zip <br>
+    Ph: @location.phone </h3>
   
   @foreach (MachineDetails details in location.MachineDetails)
   {
-    <p>@details.Name</p>
+    <ul>
+      <li>@details.Name</li>
+    </ul>
   }
-  <hr>
 }
+  </div>
+</div>
