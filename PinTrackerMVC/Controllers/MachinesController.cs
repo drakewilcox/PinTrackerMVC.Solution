@@ -10,12 +10,14 @@ namespace PinTrackerMVC.Controllers
 {
   public class MachinesController : Controller
   {
+  
     public ActionResult Index()
     {
       
       var allMachines = Machine.GetMachine();
+      List<Machine> sortedMachineList = allMachines.OrderBy(mach => mach.name).ToList();
       // List<Machine> thisMachine = allMachines.Where(mach => mach.name == "Monster Bash").ToList();
-      return View(allMachines);
+      return View(sortedMachineList);
     }
 
       // Incomplete code for PinTrackerAPI.Solution
