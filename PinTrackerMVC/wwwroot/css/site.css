@@ -64,7 +64,6 @@ body {
 
 .display-4, h1 {
 color: black;
--webkit-text-stroke: 1px black;
 }
 
 p {
@@ -169,4 +168,8 @@ form.example::after {
 #map  {
   border: 2px solid black;
   margin-top: 20px;
+}
+
+.card-title text-light {
+  font-size:100px;
 }
