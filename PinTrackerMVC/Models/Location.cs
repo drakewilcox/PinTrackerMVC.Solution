@@ -63,6 +63,16 @@ public class Location
       List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["locations"].ToString());
 
       return locationList; 
+    }
+     public static List<Location> LocationByZone(int zone)
+    {
+      var apiCallTask = ApiHelper.GetLocationByZone(zone);
+      var result = apiCallTask.Result; 
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["locations"].ToString());
+
+      return locationList; 
 
     }
 }

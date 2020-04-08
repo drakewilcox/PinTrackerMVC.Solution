@@ -165,6 +165,12 @@ form.example::after {
   display: table;
 }
 
+/* INDEX PAGES FOR LOCATION AND MACHINES */
+
+.getAll 
+{
+  color: black;
+}
 #map  {
   border: 2px solid black;
   margin-top: 20px;

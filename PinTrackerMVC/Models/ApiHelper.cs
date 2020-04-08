@@ -13,6 +13,13 @@ namespace PinTrackerMVC.Models
       return response.Content;
     }
 
+     public static async Task<string> GetLocationByZone(int zone)
+    {
+      RestClient client = new RestClient("https://pinballmap.com/api/v1/");
+      RestRequest request = new RestRequest($"locations/?region=Portland&by_zone_id={ zone }", Method.GET);
+      var response = await client.ExecuteTaskAsync(request);
+      return response.Content;
+    }
     public static async Task<string> GetAllByName(string machineName)
     {
       RestClient client = new RestClient("https://pinballmap.com/api/v1/");
