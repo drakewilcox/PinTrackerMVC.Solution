@@ -8,10 +8,9 @@
 {
   <h3>@location.name</h3>
   <h4>Address:</h4>
-  <p>@location.street</p>
-  <p>@location.city , @location.state</p>
-  <p>@location.zip</p>
+  <p>@location.street, &nbsp; @location.city, &nbsp; @location.state, &nbsp; @location.zip </p>
   <p>Phone: @location.phone</p>
+  
   @foreach (MachineDetails details in location.MachineDetails)
   {
     <p>@details.Name</p>
