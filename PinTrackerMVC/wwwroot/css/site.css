@@ -54,7 +54,8 @@ body {
   /* Margin bottom by footer height */
   font-family: 'Acme', sans-serif;
   margin-bottom: 60px;
-  background-image: url(https://i.imgur.com/86JUy87.jpg);
+  /* background-image: url(https://i.imgur.com/86JUy87.jpg); */
+  background: #d3d3d3;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,12 +63,11 @@ body {
 }
 
 .display-4, h1 {
-color: white;
--webkit-text-stroke: 1px black;
+color: black;
 }
 
 p {
-  color: white;
+  color: black;
 }
 
 .footer {
@@ -81,7 +81,7 @@ p {
 }
 
 .footer border-top footer text-muted {
-  color: white;
+  color: black;
 }
 
 /* Search Bar */
@@ -163,4 +163,13 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
+}
+
+#map  {
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+.card-title text-light {
+  font-size:100px;
 }
