@@ -164,3 +164,10 @@ form.example::after {
   clear: both;
   display: table;
 }
+
+/* INDEX PAGES FOR LOCATION AND MACHINES */
+
+.getAll 
+{
+  color: black;
+}
