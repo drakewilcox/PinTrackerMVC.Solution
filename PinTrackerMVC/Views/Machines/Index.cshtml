@@ -2,6 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 <h1>All Machines</h1>
+
+<div class="row">
+    @foreach(Machine machine in Model)
+    {
+      <div class="col-md-4">
+				<div class="card card-default">
+					<p>@machine.name</p>
+				</div>
+      </div>
+    }
+</div>
+
+
+
+
+@* 
 @foreach(Machine machine in Model)
 {
 <ol>
@@ -15,4 +31,4 @@
 
 </ol>
 
-}
+} *@
