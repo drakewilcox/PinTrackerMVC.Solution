@@ -1,9 +1,10 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 
 <div id="index-section">
+<<<<<<< HEAD
     <div class="text-center">
         <h1 class="display-4">Welcome to the Portland Pinball Tracker!</h1>
 
@@ -21,6 +22,25 @@
             <input type="submit"  value="Search!" class="btn btn-dark btn-lg">
         }   
     </div> 
+=======
+	<div class="text-center">
+		<h1 class="display-4">Welcome to the Portland Pinball Tracker!</h1>
+
+		<p>This map displays all the pinball machines and their locations in the city of Portland!</p>
+
+		<select class="form-control" id="SearchBy" name="SearchBy">
+			<option>Search by machine</option> 
+			<option>Search by location</option> 
+		</select>
+
+		@using (Html.BeginForm("Search", "Locations"))
+		{
+			<input type="text" placeholder="Search.." name="Search" class="form-control"/>
+			<br>
+			<input type="submit"  value="Search!" class="btn btn-dark btn-lg">
+		}
+	</div> 
+>>>>>>> geoff3
 </div>
 
 
@@ -30,10 +50,72 @@
 var map = new mapboxgl.Map({
 container: 'map', // container id
 style: 'mapbox://styles/mapbox/streets-v11',
-center: [-122.6, 45.5], // starting position
-zoom: 9 // starting zoom
+center: [-122.6, 45.5], // starting GPS
+zoom: 10 // starting zoom
 });
- 
-// Add zoom and rotation controls to the map.
+
+map.on('load', function() {
+	map.addSource('places', {
+			'type': 'geojson',
+			'data': {
+				'type': 'FeatureCollection',
+				'features': [
+					{
+					'type': 'Feature',
+					'properties': {
+							'description':
+									'<strong>Vintage video games & pinball machines in a futuristic 2-story arcade serving beer & light meals.</strong><br><a href="https://groundkontrol.com/" target="_blank" title="Opens in a new window">Ground Kontrol</a></p>',
+							'icon': 'rocket'
+					},
+					'geometry': {
+							'type': 'Point',
+							'coordinates': [-122.6759, 45.5240]
+					}
+				},		
+			]
+		}
+	});
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}-15',
+                'icon-allow-overlap': true
+            }
+        });
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function() {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+
+// zoom and rotation controls.
 map.addControl(new mapboxgl.NavigationControl());
 </script>
