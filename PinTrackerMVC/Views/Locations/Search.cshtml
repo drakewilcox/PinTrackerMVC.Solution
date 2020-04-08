@@ -2,21 +2,23 @@
 
 <h2>LOCATION RESULTS</h2>
 
-
 <div class="card">
+  <img class="card-img-top" src="https://i.pinimg.com/originals/74/a7/28/74a72828add1ecda6dc4de9aefed2365.jpg">
   <div class="card-body">
-@foreach (Location location in Model)
-{
-  <h3 class="card-body">@location.name <br>
-    @location.street, @location.city, @location.state @location.zip <br>
-    Ph: @location.phone </h3>
-  
-  @foreach (MachineDetails details in location.MachineDetails)
-  {
-    <ul>
-      <li>@details.Name</li>
-    </ul>
-  }
-}
+    @foreach (Location location in Model)
+    {
+      <h3 class="card-body">@location.name <br>
+        @location.street, @location.city, @location.state @location.zip <br>
+        Ph: @location.phone </h3>
+
+
+      <h3 class="card-body">Machines available to play at @location.name:</h3>
+      @foreach (MachineDetails details in location.MachineDetails)
+      {
+        <ul>
+          <li>@details.Name</li>
+        </ul>
+      }
+    }
   </div>
 </div>
