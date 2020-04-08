@@ -16,6 +16,7 @@ namespace PinTrackerMVC.Controllers
       
       var allMachines = Machine.GetMachine();
       List<Machine> sortedMachineList = allMachines.OrderBy(mach => mach.name).ToList();
+      
       // List<Machine> thisMachine = allMachines.Where(mach => mach.name == "Monster Bash").ToList();
       return View(sortedMachineList);
     }
