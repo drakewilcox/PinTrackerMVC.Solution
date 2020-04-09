@@ -9,11 +9,11 @@ a.navbar-brand {
 
 /* Index Section/Welcome/Search */
 #index-section {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 100%;
   padding: 60px;
-  margin-top: 100px;
-  background-color: rgba(14, 119, 204, 0.425);
+  /* margin-top: 10px; */
+  background-color: rgba(129, 164, 194, 0.425);
 }
 
 /* Sticky footer styles
@@ -171,11 +171,18 @@ form.example::after {
 {
   color: black;
 }
-#map  {
-  border: 2px solid black;
-  margin-top: 20px;
-}
 
 .card-title text-light {
   font-size:100px;
+}
+
+.link
+{
+  color: black; 
+}
+
+.card-title{
+  color: white;
+  padding: 20px;
+  font-size: 60px;
 }

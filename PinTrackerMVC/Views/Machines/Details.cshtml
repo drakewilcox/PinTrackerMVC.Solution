@@ -22,7 +22,7 @@
         @foreach (Location locationItem in ViewBag.MachineLocations)
         {
           <div class="col-md-4 text-center">
-          <p>@locationItem.name</p>
+          <p>@Html.ActionLink($"{@locationItem.name}", "Details", "Locations", new { id = locationItem.id } , new { @class = "link" })</p>
           </div>
         }
       </div>

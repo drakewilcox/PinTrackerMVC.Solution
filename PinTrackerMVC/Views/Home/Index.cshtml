@@ -3,67 +3,59 @@
 }
 @using PinTrackerMVC.Models
 
+<div class="card">
+    <img class="img-fluid card-img" src="https://i.imgur.com/8ucZAoy.png">
+    <div class="card-img-overlay d-flex">
+      <div class="my-auto mx-auto text-center">
+				<div class="card-title">
+					<p class="text-light">Welcome to the Portland Pinball Tracker!</p>
+					<p class="text-light">Your Portland Pinball Database</p>
+				</div>
+      </div>
+    </div>
+  </div>
 
-<div id="index-section">
-    <div class="text-center">
-        <h1 class="display-4">Welcome to the Portland Pinball Tracker!</h1>
+<div class="card">
+	<div id="index-section">
+			<div class="text-center">
+					<h1 class="display-4">Pinball Machine Search</h1>
 
-        <p>This map displays all the pinball machines and their locations in the city of Portland!</p>
+					@using (Html.BeginForm("Search", "Locations"))
+					{
+							<select class="form-control" id="SearchBy" name="SearchBy">
+							<option>Search by machine</option> 
+							<option>Search by location</option> 
+							</select>
+							<input type="text" placeholder="Search.." name="search" class="form-control"/>
+							<br>
+							<input type="submit"  value="Search!" class="btn btn-dark btn-lg">
+					}   
+			</div> 
+	</div>
 
 
-        @using (Html.BeginForm("Search", "Locations"))
-        {
-            <select class="form-control" id="SearchBy" name="SearchBy">
-            <option>Search by machine</option> 
-            <option>Search by location</option> 
-            </select>
-            <input type="text" placeholder="Search.." name="search" class="form-control"/>
-						<br>
-            <input type="submit"  value="Search!" class="btn btn-dark btn-lg">
-        }   
-    </div> 
-</div>
-
-<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-<link
-rel="stylesheet"
-href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
-type="text/css"
-/>
 <div id='map' style='width: 100%; height: 500px;'></div>
 
 <script type="text/javascript">
 
-// async function makeApiCall() {
-//  let response = await fetch("https://pinballmap.com/api/v1/locations?region=Portland");
-//  let data = await response.json();
-//  return data;
-//}
-
 mapboxgl.accessToken = 'pk.eyJ1IjoicGllaGFyZCIsImEiOiJjazhxZjBnYXQwMzh0M2lxc2d0dGY0dzB6In0.AMqWRFCTZDB00Wev4G3GtQ';
 var map = new mapboxgl.Map({
-container: 'map', // container id
+container: 'map', 
 style: 'mapbox://styles/mapbox/streets-v11',
-center: [-122.65, 45.51], // starting GPS
-zoom: 10 // starting zoom
+center: [-122.65, 45.51], 
+zoom: 10 
 });
 
-// zoom and rotation controls.
+
 map.addControl(new mapboxgl.NavigationControl());
 
 
 map.on('load', function() {
 
- 
-	// When a click event occurs on a feature in the places layer, open a popup at the
-	// location of the feature, with description HTML from its properties.
 	map.on('click', 'places', function(e) {
 	var coordinates = e.features[0].geometry.coordinates.slice();
 	var description = e.features[0].properties.description;
 	
-	// Ensure that if the map is zoomed out such that multiple
-	// copies of the feature are visible, the popup appears
-	// over the copy being pointed to.
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 	coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
@@ -74,12 +66,10 @@ map.on('load', function() {
 	.addTo(map);
 	});
 	
-	// Change the cursor to a pointer when the mouse is over the places layer.
 	map.on('mouseenter', 'places', function() {
 	map.getCanvas().style.cursor = 'pointer';
 	});
 	
-	// Change it back to a pointer when it leaves.
 	map.on('mouseleave', 'places', function() {
 	map.getCanvas().style.cursor = '';
 	});
