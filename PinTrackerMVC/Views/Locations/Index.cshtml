@@ -7,10 +7,10 @@
   <div class="card">
     <div class="card-header text-center" id="headingOne">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Beaverton 
         </button>
-      </h5>
+      </h5> 
     </div>
   </div>
 
@@ -20,7 +20,7 @@
         @foreach (Location location in ViewBag.Beaverton)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", "Locations", new { id = location.id}, new { @class = "link"} )</p>
         </div>
         }
       </div>
@@ -30,7 +30,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           Clackamas 
         </button>
       </h5>
@@ -43,7 +43,7 @@
           @foreach (Location location in ViewBag.Clackamas)
           {
           <div class="col-md-6 text-center">
-            <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+            <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
           </div>
           }
         </div>
@@ -53,7 +53,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingThree">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
          Downtown
         </button>
       </h5>
@@ -66,7 +66,7 @@
         @foreach (Location location in ViewBag.Downtown)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -76,7 +76,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingFour">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
          Gresham
         </button>
       </h5>
@@ -89,7 +89,7 @@
         @foreach (Location location in ViewBag.Gresham)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -99,7 +99,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingFive">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
           Hillsboro 
         </button>
       </h5>
@@ -112,7 +112,7 @@
         @foreach (Location location in ViewBag.Hillsboro)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -122,7 +122,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingSix">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
          Milwaukie
         </button>
       </h5>
@@ -135,7 +135,7 @@
         @foreach (Location location in ViewBag.Milwaukie)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -145,7 +145,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingSeven">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
           North
         </button>
       </h5>
@@ -158,7 +158,7 @@
         @foreach (Location location in ViewBag.North)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -168,7 +168,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingEight">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
           Northeast
         </button>
       </h5>
@@ -181,7 +181,7 @@
         @foreach (Location location in ViewBag.Northeast)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -191,7 +191,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingNine">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
           Northwest 
         </button>
       </h5>
@@ -204,7 +204,7 @@
         @foreach (Location location in ViewBag.Northwest)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -214,7 +214,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingTen">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
           Southeast 
         </button>
       </h5>
@@ -227,7 +227,7 @@
         @foreach (Location location in ViewBag.Southeast)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -237,7 +237,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingEleven">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
           Southwest
         </button>
       </h5>
@@ -250,7 +250,7 @@
         @foreach (Location location in ViewBag.Southwest)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -260,7 +260,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingTwelve">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
           Tigard 
         </button>
       </h5>
@@ -273,7 +273,7 @@
         @foreach (Location location in ViewBag.Tigard)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -283,7 +283,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingThirteen">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
           Vancouver
         </button>
       </h5>
@@ -296,7 +296,7 @@
         @foreach (Location location in ViewBag.Vancouver)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
@@ -306,7 +306,7 @@
   <div class="card">
     <div class="card-header text-center" id="headingFourteen">
       <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen">
+        <button class="btn btn-link link" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen">
           Wilsonville
         </button>
       </h5>
@@ -319,7 +319,7 @@
         @foreach (Location location in ViewBag.Wilsonville)
         {
         <div class="col-md-6 text-center">
-          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id}, new { @class = "link"})</p>
         </div>
         }
       </div>
