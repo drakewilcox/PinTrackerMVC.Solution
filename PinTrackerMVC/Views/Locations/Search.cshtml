@@ -13,7 +13,7 @@
     <div class="card-body">
           @foreach (Location location in Model)
       {
-        <h3 class="card-body">@location.name <br>
+        <h3 class="card-body">@Html.ActionLink($"{ @location.name }", "Details", "Locations", new { id = location.id}, new { @class = "link" }) <br>
           @location.street, @location.city, @location.state @location.zip <br>
           Ph: @location.phone </h3>
   

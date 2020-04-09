@@ -179,3 +179,8 @@ form.example::after {
 .card-title text-light {
   font-size:100px;
 }
+
+.link
+{
+  color: black; 
+}
