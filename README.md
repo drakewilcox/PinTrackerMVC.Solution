@@ -1,6 +1,3 @@
-
-
-
 # _Pinball Tracker_
 
 #### By _**Drake Wilcox, Geoff Goetz, Brandan Sayarath, Dom Youmans**_
@@ -11,7 +8,7 @@
 
 ## Description
 
-This is a project designed to simplify finding the exact pinball machine in a desired location.
+This is a project designed to simplify locating the exact pinball machine in a desired location within the Portland metro area. It utilizes the Pinballmap.com API to create search functionality allowing search by machine name or pinball machine location.
 
 ## Specifications and User Stories: 
 
@@ -71,32 +68,24 @@ _Add the MySQL environment variable to the System PATH. Instructions for Windows
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
-* ``git clone https://github.com/drakewilcox/LocalBusinessTrackerAPI.Solution``
-* ``cd LocalBusinessTrackerAPI.Solution``
+* ``git clone https://github.com/drakewilcox/PinTrackerMVC.Solution``
+* ``cd PinTrackerMVC.Solution``
 
-_Confirm that you have navigated to the HairSalon.Solution directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
+_Confirm that you have navigated to the PinTrackerMVC.Solution directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
 
-_Change into the working directory of the project to begin recreating the ``drake_wilcox`` database:_
-* ``cd LocalBusinessTrackerAPI``
-
-_Run the migration command to populate your MySQL server with the Database and Tables and Seed Data associated with this project:_
-* ``dotnet restore``
-* ``dotnet build``
-* ``dotnet ef database update``
-
-_From the production folder ``LocalBusinessTrackerAPI`` Run this application by entering the following commands in Terminal (macOS) or PowerShell (Windows):_`
+_From the production folder ``PinTrackerMVC.Solution`` Run this application by entering the following commands in Terminal (macOS) or PowerShell (Windows):_`
 * ``dotnet restore``
 * ``dotnet build``
 * ``dotnet run`` or ``dotnet watch run``
 
-_To test this API after running the application, Use Postman or view the [Swagger UI](http://localhost:5000/swagger) to view and test routes._
-
-_To view/edit the source code of this application, open the contents of the ``LocalBusinessTrackerAPI.Solution`` directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
+_To view/edit the source code of this application, open the contents of the ``PinTrackerMVC.Solution`` directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
 
 ## Technologies Used
 * _Git_
 * _HTML_
 * _CSS_
+* _Javascript_
+* _jQuery_
 * _C#_
 * _.NET Core 2.2_
 * _ASP.NET Core MVC (version 2.2)_
@@ -105,11 +94,12 @@ _To view/edit the source code of this application, open the contents of the ``Lo
 * _MySQL 8.0 CE_
 * _MySQL Workbench 8.0 CE_
 * _Entity Framework Core 2.2_
-* _Swashbuckle and ASP.NET CORE
-* _ASP.NET Core MVC Versioning 3.1.6
+* _MapboxGL.js_
+* _Pinball Maps API_
+* _GeoJson_
 
 ### License
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2020 **_Drake Wilcox, Geoff Goetz, Drake Wilcox, Dom Youmans_**
+Copyright (c) 2020 **_Drake Wilcox, Geoff Goetz, Brandan Sayarath, Dom Youmans_**
