@@ -34,12 +34,11 @@
           @foreach (MachineDetails details in ViewBag.MachinesAtLocation)
           {
             <div class= "text-center">
-              <h5>@details.Name</h5>
+              <h5>@Html.ActionLink($"{@details.Name}", "Details", "Machines", new {machId = @details.Id }, new { @class= "link"})</h5>
               <p><em>@details.Condition</em></p>
               <hr>
             </div>
           }
-     
       }
     </div>
   </div>

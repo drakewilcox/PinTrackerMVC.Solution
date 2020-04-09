@@ -21,7 +21,7 @@
         @foreach (MachineDetails details in location.MachineDetails)
         {
           <ul>
-            <li>@details.Name</li>
+            <li>@Html.ActionLink($"{@details.Name}", "Details", "Machines", new {machId = @details.Id }, new { @class= "link"})</li>
           </ul>
         }
         <hr>

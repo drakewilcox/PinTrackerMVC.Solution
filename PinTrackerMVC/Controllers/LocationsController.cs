@@ -56,7 +56,6 @@ namespace PinTrackerMVC.Controllers
       return View(thisLocation);
     }
 
-
     [HttpPost]
     public ActionResult Search(string searchBy, string search)
     {
