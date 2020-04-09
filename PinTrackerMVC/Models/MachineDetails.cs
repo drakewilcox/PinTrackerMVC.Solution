@@ -6,6 +6,9 @@ namespace PinTrackerMVC.Models
 {
   public class MachineDetails
   {
+    public string HighScore {get; set; }
+    public string Condition { get; set; }
+    public int LmxId { get; set; }
     public int Id { get; set; }
     public string Name { get; set; }
     public int Year { get; set; }

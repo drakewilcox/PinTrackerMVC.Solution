@@ -30,14 +30,16 @@
 
         <h3 class="text-center">Machines available to play at @location.name:</h3>
         <br>
-        <div class="row">
+        
           @foreach (MachineDetails details in ViewBag.MachinesAtLocation)
           {
-            <div class="col-md-4 text-center">
-              <p>@details.Name</p>
+            <div class= "text-center">
+              <h5>@details.Name</h5>
+              <p><em>@details.Condition</em></p>
+              <hr>
             </div>
           }
-        </div>
+     
       }
     </div>
   </div>

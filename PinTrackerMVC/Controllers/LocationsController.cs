@@ -29,11 +29,30 @@ namespace PinTrackerMVC.Controllers
       return View();
     }
 
-  
     public ActionResult Details(int id)
     {
       var thisLocation = Location.LocationById(id);
       ViewBag.MachinesAtLocation = MachineDetails.GetDetails(id);
+      foreach (Location location in thisLocation)
+      {
+          foreach (MachineDetails xref in ViewBag.MachinesAtLocation)
+          {
+            foreach (LocationMachineXref reference in location.location_machine_xrefs)
+            {
+              if (reference.machine_id == xref.Id)
+              {
+                xref.LmxId = reference.id;
+                xref.Condition = reference.condition;
+              }
+            }
+            // var highScore = MachineScore.ScoreById(xref.LmxId.ToString());
+            // foreach(MachineScore thisScore in highScore)
+            // {
+            //   xref.HighScore = (thisScore.score).ToString();
+            // }
+          }
+        }
+    
       return View(thisLocation);
     }
 
@@ -59,6 +78,7 @@ namespace PinTrackerMVC.Controllers
         {
           location.MachineDetails = MachineDetails.GetDetails
           (location.id);
+          
         }
         return View(searchLocation);
       }
