@@ -75,6 +75,17 @@ public class Location
       return locationList; 
 
     }
+      public static List<Location> LocationById(int id)
+      {
+      var apiCallTask = ApiHelper.GetByOnlyLocationId(id);
+      var result = apiCallTask.Result; 
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["locations"].ToString());
+
+      return locationList; 
+
+      }
 }
 
   public class RootObject

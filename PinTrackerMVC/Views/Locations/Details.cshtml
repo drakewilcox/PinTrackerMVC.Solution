@@ -1,0 +1,45 @@
+@* @{
+    ViewData["Title"] = "Home Page";
+} *@
+@using PinTrackerMVC.Models;
+@* @model PinTrackerMVC.Models.Location; *@
+
+<div class="card">
+    <img class="img-fluid card-img" src="https://i.imgur.com/lJPf7Ea.png">
+    <div class="card-img-overlay d-flex">
+      <div class="my-auto mx-auto text-center">
+        <h1 class="card-title text-light"></h1>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+          @foreach (Location location in Model)
+      {
+        <h3>@location.name </h3>
+        <h5>@location.street, @location.city, @location.state @location.zip</h5>  
+        <h5>Ph: @location.phone </h5>
+          @* @foreach (LocationMachineXref machCondition in @location.location_machine_xrefs)
+          {
+            <p>@machCondition.id</p>
+          } *@
+        <p><a href="@location.Website">Website</a></p>
+
+        <br>
+        <hr>
+
+        <h3 class="text-center">Machines available to play at @location.name:</h3>
+        <br>
+        <div class="row">
+          @foreach (MachineDetails details in ViewBag.MachinesAtLocation)
+          {
+            <div class="col-md-4 text-center">
+              <p>@details.Name</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>
+

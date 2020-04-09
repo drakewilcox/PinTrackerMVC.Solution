@@ -28,6 +28,16 @@ namespace PinTrackerMVC.Controllers
       
       return View();
     }
+
+  
+    public ActionResult Details(int id)
+    {
+      var thisLocation = Location.LocationById(id);
+      ViewBag.MachinesAtLocation = MachineDetails.GetDetails(id);
+      return View(thisLocation);
+    }
+
+
     [HttpPost]
     public ActionResult Search(string searchBy, string search)
     {

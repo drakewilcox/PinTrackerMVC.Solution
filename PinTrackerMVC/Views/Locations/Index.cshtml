@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h1>All Machines</h1>
+<h1 class="text-center">ALL LOCATIONS</h1>
 
 <div id="accordion">
   <div class="card">
@@ -14,15 +14,19 @@
     </div>
   </div>
 
-
   <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Beaverton)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
  
-
-
   <div class="card">
     <div class="card-header text-center" id="headingTwo">
       <h5 class="mb-0">
@@ -33,14 +37,18 @@
     </div>
   </div>
 
-
-<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <div class="row">
+          @foreach (Location location in ViewBag.Clackamas)
+          {
+          <div class="col-md-6 text-center">
+            <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+          </div>
+          }
+        </div>
       </div>
     </div>
-
-
 
   <div class="card">
     <div class="card-header text-center" id="headingThree">
@@ -54,11 +62,16 @@
 
   <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Downtown)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
-
-
 
   <div class="card">
     <div class="card-header text-center" id="headingFour">
@@ -72,7 +85,14 @@
 
   <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Gresham)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -88,7 +108,14 @@
 
   <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Hillsboro)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -104,7 +131,14 @@
 
   <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Milwaukie)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -120,7 +154,14 @@
 
   <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.North)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -136,7 +177,14 @@
 
   <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Northeast)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -152,7 +200,14 @@
 
   <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Northwest)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -168,7 +223,14 @@
 
   <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Southeast)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -184,7 +246,14 @@
 
   <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Southwest)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -200,7 +269,14 @@
 
   <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Tigard)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -216,7 +292,14 @@
 
   <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Vancouver)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 
@@ -232,21 +315,17 @@
 
   <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
     <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+        @foreach (Location location in ViewBag.Wilsonville)
+        {
+        <div class="col-md-6 text-center">
+          <p>@Html.ActionLink($"{location.name}", "Details", new { id = location.id})</p>
+        </div>
+        }
+      </div>
     </div>
   </div>
 </div>
 
-
-
-
-@* <div class="row">
-    @foreach(Location locations in Model)
-    {
-      <div class="col-md-3 col-lg-2" >
-				<p class="">@locations.name</p>
-      </div>
-    }
-</div> *@
 
 
