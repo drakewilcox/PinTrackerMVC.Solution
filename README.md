@@ -3,7 +3,7 @@
 
 # _Pinball Tracker_
 
-#### By _**Drake Wilcox, Geoff Goetz, Drake Wilcox, Dom Youmans**_
+#### By _**Drake Wilcox, Geoff Goetz, Brandan Sayarath, Dom Youmans**_
 
    ![enter image description here](https://cdn.dribbble.com/users/1397073/screenshots/3846553/phil-nicholson-animation-motion-design-manchester-dribbble-gif-loop-vector-illustration.gif)
 
