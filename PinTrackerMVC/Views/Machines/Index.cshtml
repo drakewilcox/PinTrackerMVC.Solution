@@ -1,13 +1,14 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h1>All Machines</h1>
-
+<h1 class="text-center">All Machines in Portland</h1>
+<hr>
+<br>
 <div class="row">
     @foreach(Machine machine in Model)
     {
       <div class="col-md-3 col-lg-2" >
-				<p class="">@machine.name</p>
+				<p>@Html.ActionLink($"{@machine.name}", "Details", "Machines", new {machId = @machine.id }, new { @class= "link"})</p>
       </div>
     }
 </div>
