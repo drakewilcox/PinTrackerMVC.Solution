@@ -13,12 +13,20 @@ namespace PinTrackerMVC.Controllers
   
     public ActionResult Index()
     {
-      
       var allMachines = Machine.GetMachine();
       List<Machine> sortedMachineList = allMachines.OrderBy(mach => mach.name).ToList();
       
       // List<Machine> thisMachine = allMachines.Where(mach => mach.name == "Monster Bash").ToList();
       return View(sortedMachineList);
+    }
+
+    public ActionResult Details(int machId)
+    {
+      ViewBag.MachineLocations = Location.LocationByMachId(machId);
+      var allMachines = Machine.GetMachine();
+      var machDetails = allMachines.FirstOrDefault(mach => mach.id == machId);  
+
+      return View(machDetails);
     }
 
       // Incomplete code for PinTrackerAPI.Solution
