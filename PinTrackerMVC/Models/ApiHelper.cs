@@ -8,7 +8,7 @@ namespace PinTrackerMVC.Models
     public static async Task<string> GetAll()
     {
       RestClient client = new RestClient("https://pinballmap.com/api/v1/");
-      RestRequest request = new RestRequest("machines/", Method.GET);
+      RestRequest request = new RestRequest("machines/?region_id=1", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
@@ -46,6 +46,14 @@ namespace PinTrackerMVC.Models
     {
       RestClient client = new RestClient("https://pinballmap.com/api/v1/");
       RestRequest request = new RestRequest($"locations/?region=Portland&by_location_name={ locationName }", Method.GET);
+      var response = await client.ExecuteTaskAsync(request);
+      return response.Content; 
+    }
+
+       public static async Task<string> GetLocationByMachId(int machId)
+    {
+      RestClient client = new RestClient("https://pinballmap.com/api/v1/");
+      RestRequest request = new RestRequest($"locations/?region=Portland&by_machine_id={ machId }", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content; 
     }
